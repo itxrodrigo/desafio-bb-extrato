@@ -1,49 +1,55 @@
-# 🏦 Desafio BB - Consulta de Extratos Bancários
+🏦 Desafio BB - Consulta de Extratos Bancários
 
-Projeto completo de automação para consulta de extratos bancários via API do Banco do Brasil, implementado em **Python** e **UiPath RPA**.
+Projeto completo de automação para consulta de extratos bancários via API do Banco do Brasil, implementado em Python e UiPath RPA.
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![UiPath](https://img.shields.io/badge/UiPath-Studio-orange.svg)](https://www.uipath.com/)
-[![Status](https://img.shields.io/badge/Status-Completo-success.svg)]()
-
----
-
-## 📋 Descrição
+📋 Descrição
 
 Sistema automatizado que:
-- ✅ Lê planilha com múltiplas contas bancárias
-- ✅ Autentica via OAuth2 na API do BB (Sandbox)
-- ✅ Consulta extratos de cada conta
-- ✅ Gera planilha Excel consolidada com abas por conta
-- ✅ Registra log detalhado de execução
-- ✅ Implementado em Python e UiPath (mesma lógica)
 
----
+✅ Lê planilha com múltiplas contas bancárias
 
-## 🚀 Tecnologias
+✅ Autentica via OAuth2 na API do BB (Sandbox)
 
-### Python
-- Python 3.x
-- Pandas, Requests, OpenPyXL
-- OAuth2 Client Credentials
-- Dotenv para variáveis de ambiente
+✅ Consulta extratos de cada conta
 
-### UiPath
-- UiPath Studio Community
-- Excel Activities
-- HTTP Request Activities
-- DataTable manipulation
+✅ Gera planilha Excel consolidada com abas por conta
 
-### Outros
-- Postman (Collection para testes)
-- API Banco do Brasil (Sandbox)
-- Git/GitHub
+✅ Registra log detalhado de execução
 
----
+✅ Implementado em Python e UiPath (mesma lógica)
 
-## 📁 Estrutura do Projeto
+🚀 Tecnologias
 
-```
+Python
+
+Python 3.x
+
+Pandas, Requests, OpenPyXL
+
+OAuth2 Client Credentials
+
+Dotenv para variáveis de ambiente
+
+UiPath
+
+UiPath Studio Community
+
+Excel Activities
+
+HTTP Request Activities
+
+DataTable manipulation
+
+Outros
+
+Postman (Collection para testes)
+
+API Banco do Brasil (Sandbox)
+
+Git/GitHub
+
+📁 Estrutura do Projeto
+
 desafio-bb-extrato/
 ├── python/
 │   ├── src/
@@ -68,241 +74,304 @@ desafio-bb-extrato/
 │
 ├── .gitignore
 └── README.md
-```
 
----
 
-## ⚙️ Instalação e Configuração
+⚙️ Instalação e Configuração
 
-### 1️⃣ Clonar o Repositório
+1️⃣ Clonar o Repositório
 
-```bash
-git clone https://github.com/SEU_USUARIO/desafio-bb-extrato.git
+git clone [https://github.com/SEU_USUARIO/desafio-bb-extrato.git](https://github.com/SEU_USUARIO/desafio-bb-extrato.git)
 cd desafio-bb-extrato
-```
 
----
 
-### 2️⃣ Configuração Python
+2️⃣ Configuração Python
 
-#### a) Criar ambiente virtual
+a) Criar ambiente virtual
 
-```bash
 cd python
 python -m venv venv
 venv\Scripts\activate  # Windows
-```
 
-#### b) Instalar dependências
 
-```bash
+b) Instalar dependências
+
 pip install -r requirements.txt
-```
 
-#### c) Configurar credenciais
 
-Crie arquivo `.env` na pasta `python/`:
+c) Configurar credenciais
 
-```env
+Crie arquivo .env na pasta python/:
+
 BB_CLIENT_ID=seu_client_id
 BB_CLIENT_SECRET=seu_client_secret
 BB_DEV_APP_KEY=seu_dev_app_key
-BB_TOKEN_URL=https://oauth.sandbox.bb.com.br/oauth/token
-```
+BB_TOKEN_URL=[https://oauth.sandbox.bb.com.br/oauth/token](https://oauth.sandbox.bb.com.br/oauth/token)
 
-#### d) Preparar planilha de contas
 
-Edite `python/data/contas.xlsx`:
+d) Preparar planilha de contas
 
-| agencia | conta |
-|---------|-------|
-| 0001 | 123456 |
-| 1010 | 987654 |
+Edite python/data/contas.xlsx:
 
----
+agencia
 
-### 3️⃣ Configuração UiPath
+conta
 
-1. Abra **UiPath Studio**
-2. **File** → **Open** → `uipath/BB_Extrato_Final/project.json`
-3. Verifique se os pacotes estão instalados:
-   - UiPath.Excel.Activities
-   - UiPath.System.Activities
+0001
 
----
+123456
 
-## ▶️ Como Executar
+1010
 
-### Python
+987654
 
-```bash
+3️⃣ Configuração UiPath
+
+Abra UiPath Studio
+
+File → Open → uipath/BB_Extrato_Final/project.json
+
+Verifique se os pacotes estão instalados:
+
+UiPath.Excel.Activities
+
+UiPath.System.Activities
+
+▶️ Como Executar
+
+Python
+
 cd python
 python src/main.py
-```
 
-**Saída:**
-- Arquivo: `python/output/extrato.xlsx`
-- Abas: uma por conta + `Log_Execucao`
 
----
+Saída:
 
-### UiPath
+Arquivo: python/output/extrato.xlsx
 
-1. Abra o projeto no UiPath Studio
-2. Pressione **F5** ou clique em **Run**
-3. Verifique o arquivo: `python/output/extrato_final.xlsx`
+Abas: uma por conta + Log_Execucao
 
----
+UiPath
 
-### Postman
+Abra o projeto no UiPath Studio
 
-1. Importe `postman/BB_Extratos.postman_collection.json`
-2. Execute "1. Autenticação - Obter Token"
-3. Execute "2. Consultar Extrato"
+Pressione F5 ou clique em Run
 
----
+Verifique o arquivo: python/output/extrato_final.xlsx
 
-## 📊 Estrutura das Planilhas
+Postman
 
-### Entrada: `contas.xlsx`
+Importe postman/BB_Extratos.postman_collection.json
 
-| agencia | conta |
-|---------|-------|
-| 0001 | 123456 |
-| 1010 | 987654 |
+Execute "1. Autenticação - Obter Token"
 
-### Saída Python: `extrato.xlsx`
+Execute "2. Consultar Extrato"
 
-**Aba por conta** (ex: `0001-123456`):
+📊 Estrutura das Planilhas
 
-| dataLancamento | numeroDocumento | valorLancamento | textoDescricaoHistorico |
-|----------------|-----------------|-----------------|-------------------------|
-| 01/11/2024 | DOC1001 | -150.00 | PAGAMENTO CONTA |
-| 03/11/2024 | DOC1002 | 2500.00 | SALARIO |
+Entrada: contas.xlsx
 
-**Aba `Log_Execucao`**:
+agencia
 
-| agencia | conta | status | qtd_lancamentos |
-|---------|-------|--------|-----------------|
-| 0001 | 123456 | OK | 14 |
-| 1010 | 987654 | OK | 11 |
+conta
 
-### Saída UiPath: `extrato_final.xlsx`
+0001
 
-**Aba `Log_Execucao`**:
+123456
 
-| agencia | conta | status |
-|---------|-------|--------|
-| 1 | 123456 | OK |
-| 1010 | 987654 | OK |
+1010
 
----
+987654
 
-## 🔧 Modo de Desenvolvimento (Mock)
+Saída Python: extrato.xlsx
 
-### Python
+Aba por conta (ex: 0001-123456):
+
+dataLancamento
+
+numeroDocumento
+
+valorLancamento
+
+textoDescricaoHistorico
+
+01/11/2024
+
+DOC1001
+
+-150.00
+
+PAGAMENTO CONTA
+
+03/11/2024
+
+DOC1002
+
+2500.00
+
+SALARIO
+
+Aba Log_Execucao:
+
+agencia
+
+conta
+
+status
+
+qtd_lancamentos
+
+0001
+
+123456
+
+OK
+
+14
+
+1010
+
+987654
+
+OK
+
+11
+
+Saída UiPath: extrato_final.xlsx
+
+Aba Log_Execucao:
+
+agencia
+
+conta
+
+status
+
+1
+
+123456
+
+OK
+
+1010
+
+987654
+
+OK
+
+🔧 Modo de Desenvolvimento (Mock)
+
+Python
 
 Por padrão usa dados fictícios. Para usar API real:
 
-Em `main.py`, linha 35:
-```python
-resultado = consultar_extrato(agencia, conta, token, usar_mock=False)
-```
+Em main.py, linha 35:
 
-### UiPath
+resultado = consultar_extrato(agencia, conta, token, usar_mock=False)
+
+
+UiPath
 
 Atualmente apenas registra log. Para integrar com API:
-- Adicionar HTTP Request para autenticação
-- Adicionar HTTP Request para consulta
-- Adicionar Deserialize JSON
-- Ver `uipath/README_UIPATH.md` para detalhes
 
----
+Adicionar HTTP Request para autenticação
 
-## 🧪 Testes
+Adicionar HTTP Request para consulta
 
-### Testar autenticação
+Adicionar Deserialize JSON
 
-```bash
+Ver uipath/README_UIPATH.md para detalhes
+
+🧪 Testes
+
+Testar autenticação
+
 cd python
 python src/auth.py
-```
 
-### Testar consulta de extrato
 
-```bash
+Testar consulta de extrato
+
 python src/extrato.py
-```
 
----
 
-## 📝 Notas Importantes
+📝 Notas Importantes
 
-- ⚠️ **Ambiente:** Sandbox/Homologação (não produção)
-- ⚠️ **API BB:** Pode estar temporariamente indisponível
-- ⚠️ **Credenciais:** Nunca versionar arquivos `.env`
-- ✅ **Mock:** Projeto funciona com dados fictícios para desenvolvimento
-- ✅ **Escalável:** Fácil trocar mock por API real quando disponível
+⚠️ Ambiente: Sandbox/Homologação (não produção)
 
----
+⚠️ API BB: Pode estar temporariamente indisponível
 
-## 🎯 Status do Projeto
+⚠️ Credenciais: Nunca versionar arquivos .env
 
-- [x] Estrutura Python completa
-- [x] Autenticação OAuth2 implementada
-- [x] Consulta de extratos (modo mock)
-- [x] Geração de Excel com múltiplas abas
-- [x] Log de execução detalhado
-- [x] Postman Collection criada
-- [x] UiPath workflow completo
-- [x] Documentação completa
-- [x] GitHub publicado
-- [ ] Testes com API real (aguardando estabilidade do sandbox BB)
-- [ ] Implementar retry logic
-- [ ] Adicionar testes unitários
+✅ Mock: Projeto funciona com dados fictícios para desenvolvimento
 
----
+✅ Escalável: Fácil trocar mock por API real quando disponível
 
-## 🤝 Como Contribuir
+🎯 Status do Projeto
 
-1. Fork o projeto
-2. Crie uma branch: `git checkout -b feature/nova-funcionalidade`
-3. Commit: `git commit -m 'Adiciona nova funcionalidade'`
-4. Push: `git push origin feature/nova-funcionalidade`
-5. Abra um Pull Request
+[x] Estrutura Python completa
 
----
+[x] Autenticação OAuth2 implementada
 
-## 📄 Licença
+[x] Consulta de extratos (modo mock)
+
+[x] Geração de Excel com múltiplas abas
+
+[x] Log de execução detalhado
+
+[x] Postman Collection criada
+
+[x] UiPath workflow completo
+
+[x] Documentação completa
+
+[x] GitHub publicado
+
+[ ] Testes com API real (aguardando estabilidade do sandbox BB)
+
+[ ] Implementar retry logic
+
+[ ] Adicionar testes unitários
+
+🤝 Como Contribuir
+
+Fork o projeto
+
+Crie uma branch: git checkout -b feature/nova-funcionalidade
+
+Commit: git commit -m 'Adiciona nova funcionalidade'
+
+Push: git push origin feature/nova-funcionalidade
+
+Abra um Pull Request
+
+📄 Licença
 
 Este projeto é para fins educacionais/demonstração técnica.
 
----
+👤 Autor
 
-## 👤 Autor
+Rodrigo Moreira Alves
 
-**Rodrigo Moreira Alves**
+GitHub: @itxtodrigo
 
-- GitHub: [@itxtodrigo](https://github.com/itxrodrigo)
+🙏 Agradecimentos
 
+Banco do Brasil por disponibilizar API Sandbox
 
----
+Comunidade UiPath
 
-## 🙏 Agradecimentos
+Documentação Python
 
-- Banco do Brasil por disponibilizar API Sandbox
-- Comunidade UiPath
-- Documentação Python
+Time RPA CSN pela oportunidade de concorrer a vaga
 
----
-
-## 📞 Suporte
+📞 Suporte
 
 Para dúvidas ou problemas:
-1. Abra uma [Issue](https://github.com/SEU_USUARIO/desafio-bb-extrato/issues)
-2. Consulte a documentação em cada pasta
-3. Verifique os logs de execução
 
----
+Abra uma Issue
 
-**⭐ Se este projeto foi útil, deixe uma estrela no repositório!**
+Consulte a documentação em cada pasta
+
+Verifique os logs de execução
+
+⭐ Se este projeto foi útil, deixe uma estrela no repositório!
