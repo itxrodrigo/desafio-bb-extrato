@@ -20,3 +20,12 @@ output/
 
 # Excel temporários
 ~$*.xlsx
+
+# UiPath
+*.screenshots/
+.local/
+.tmh/
+.objects/
+*.xaml.cs
+*.dll
+*.pdb

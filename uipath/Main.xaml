@@ -1,0 +1,201 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwah="clr-namespace:UiPath.Web.Activities.Http;assembly=UiPath.Web.Activities" xmlns:uwahm="clr-namespace:UiPath.Web.Activities.Http.Models;assembly=UiPath.Web.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Web.Activities.Http.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>UiPath.Web.Activities.Http</x:String>
+      <x:String>UiPath.Sdk.Activities</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection.Contracts</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Excel.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1128,2145" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="conta">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="agencia">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtContas" />
+      <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="strResposta" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtLog" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;=== INICIANDO PROCESSO ===&quot;]" />
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dtContas]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="452,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Planilha1" WorkbookPath="contas.xlsx" />
+    <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" LocalFiles="{x:Null}" OAuthToken="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="True" DisableSslVerification="True" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormData="[new System.Collections.Generic.Dictionary(Of System.String, System.String) From { { &quot;grant_type&quot;, &quot;client_credentials&quot; },{ &quot;scope&quot;, &quot;extrato-conta-corrente&quot; } }]" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA;&#x9;New FileFormDataPart(),&#xA;&#x9;New BinaryFormDataPart(),&#xA;&#x9;New TextFormDataPart()&#xA;}]" Headers="[new System.Collections.Generic.Dictionary(Of System.String, System.String) From { { &quot;Authorization&quot;, &quot;Basic &quot; + Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(&quot;eyJpZCI6IiIsImNvZGlnb1B1YmxpY2Fkb3IiOjAsImNvZGlnb1NvZnR3YXJlIjoxNjI5NDcsInNlcXVlbmNpYWxJbnN0YWxhY2FvIjoxfQ:eyJpZCI6ImMzNGNmNjAtZmRjYi00ZDU0LTkzMDUtZTRhZDM2ODFmIiwiY29kaWdvUHVibGljYWRvciI6MCwiY29kaWdvU29mdHdhcmUiOjE2Mjk0Nywic2VxdWVuY2lhbEluc3RhbGFjYW8iOjEsInNlcXVlbmNpYWxDcmVkZW5jaWFsIjoxLCJhbWJpZW50ZSI6ImhvbW9sb2dhY2FvIiwiaWF0IjoxNzYzNTY4MjU3OTU0fQ&quot;)) } }]" sap:VirtualizedContainerService.HintSize="452,329" sap2010:WorkflowViewState.IdRef="NetHttpRequest_1" InitialDelay="500" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" PreferRetryAfterValue="True" RequestBodyType="FormUrlEncoded" RequestUrl="https://oauth.hm.bb.com.br/oauth/token" Result="[strResposta]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA;&#x9;System.Net.HttpStatusCode.RequestTimeout,&#xA;&#x9;System.Net.HttpStatusCode.TooManyRequests,&#xA;&#x9;System.Net.HttpStatusCode.InternalServerError,&#xA;&#x9;System.Net.HttpStatusCode.BadGateway,&#xA;&#x9;System.Net.HttpStatusCode.ServiceUnavailable,&#xA;&#x9;System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+      <uwah:NetHttpRequest.TimeoutInMiliseconds>
+        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000" />
+        </InArgument>
+      </uwah:NetHttpRequest.TimeoutInMiliseconds>
+    </uwah:NetHttpRequest>
+    <ui:BuildDataTable DataTable="[dtLog]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="452,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;agencia&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;conta&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ClearDataTable DataTable="[dtLog]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="452,113" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtContas]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="452,979" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,797" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[agencia]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("agencia").ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[conta]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("conta").ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Processando Ag: &quot; + agencia + &quot; / Conta: &quot; + conta]" />
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{ CurrentRow(&quot;agencia&quot;).ToString, CurrentRow(&quot;conta&quot;).ToString, &quot;OK&quot; }]" DataTable="[dtLog]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,212" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[strResposta]" />
+    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[dtLog]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="452,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Log_Execucao" WorkbookPath="extrato_final.xlsx" />
+  </Sequence>
+</Activity>
